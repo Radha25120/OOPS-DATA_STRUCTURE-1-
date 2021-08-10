@@ -1,0 +1,549 @@
+DATA STRUCTURE AND OOPS
+
+1)WHY OOPS?
+
+   1) OOPs makes development and maintenance easier
+   2) OOPs provides data hiding, whereas, in a procedure-oriented programming language, global data can be accessed from anywhere.
+   3) Reuse of code through inheritance. 
+   4) Flexibility through polymorphism.
+   5) Effective problem solving.
+
+2)WHAT ARE THE ALTERNATIVE TO OOPS?
+ 
+   1) Functional programming:  This includes languages such as Erlang and Scala, which are used for telecommunications and fault tolerant systems.
+   2) Structured or modular programming: This includes languages such as PHP and C#.
+   3) Imperative programming : This alternative to OOP focuses on function rather than models and includes C++ and Java.
+   4) Declarative programming: This programming method involves statements on what the task or desired outcome is but not how to achieve it. 
+      Languages include Prolog and Lisp.
+   5) Logical programming    : This method, which is based mostly in formal logic and uses languages such as Prolog, 
+      contains a set of sentences that express facts or rules about a problem domain.
+      It focuses on tasks that can benefit from rule-based logical queries.   
+
+3)##ADVANTAGES AND DISADVANTAGES OF OOPS?
+   **ADVANTAGES**
+   1) Re-usability     :- It means reusing some facilities rather than building them again and again.
+   2) Data Redundancy  :- Inheritance is the good feature for data redundancy if you need a same functionality in multiple class 
+      you can write a common class for the same functionality and inherit that class to sub class.
+   3) Easy Maintenance :- It is easy to maintain and modify existing code as new objects can be created with small differences to existing ones.
+   4) Data hiding      :- Implementation details are hidden from other modules and other modules has a clearly defined interface.
+   5) Security         :- Using data hiding and abstraction we are providing necessary data only it mean we are maintaining security.
+   6) Code Reuse and Recycling:- Objects created for Object Oriented Programs can easily be reused in other programs.
+   7) Encapsulation    :- Once an Object is created, knowledge of its implementation is not necessary for its use.
+      In older programs, coders needed understand the details of a piece of code before using it.
+
+   **DISADVANTAGES**
+
+   1) Size  : Object Oriented Programs are much larger than other programs.
+   2) Effort: Object Oriented Programs require a lot of work to create.
+   3) Speed : Object Oriented Programs are slower than other programs, because of their size.
+
+##ADVANTAGES AND DISADVANTAGES OF DATA STRUCTURE?
+   **ADVANTAGES**
+   1) Data structures allow information storage on hard disks. 
+   2) provides means for management of large dataset such as databases or internet indexing services.
+   3) Are necessary for design of efficient algorithms.
+   4) allows safe storage of information on a computer. The information is then available for later use and can be used by multiple programs. 
+      Additionally, the information is secures and can not be lost .
+   5) allows the data use and processing on a software system. 
+   6) Allows easier processing of data.
+   7) Using internet, we can access the data anytime from any connected machine (computer, laptop, tablet, phone, etc.)
+
+   **DISADVANTAGES**
+   1) Only advanced users can make changes to data structures
+   2) Any problem involving data structure will need an expert's help, i.e. basic users can not help themselves. 
+  
+4)WHAT IS OBJECT WITH BRIEF REAL TIME ANSWER?
+   **OBJECT − Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors – wagging the tail, barking, eating. 
+              An object is an instance of a class.
+
+   **CLASS  − A class can be defined as a template/blueprint that describes the behavior/state that the object of its type support.
+
+EXAMPLE PROGRAM:
+class Person:
+ 
+    # init method or constructor
+    def __init__(self, name,game):
+        self.name = name
+        self.game = game
+    # Sample Method
+    def say_hi(self):
+        print('Hello, my name is', self.name)
+        print("I like to play", self.game)
+p = Person('Shwetanshu','chess')          #obj
+p.say_hi()
+
+OUTPUT: 
+     Hello, my name is Shwetanshu
+     I like to play chess
+
+5).ENSCAPSULATION
+
+**WHAT**
+   Encapsulation in Java is a process of wrapping code and data together into a single unit, 
+   FOR EXAMPLE: a capsule which is mixed of several medicines.
+
+**ADVANTAGES**
+   1) Encapsulation protects an object from unwanted access by clients.
+   2) Encapsulation allows access to a level without revealing the complex details below that level.
+   3) It reduces human errors.
+   4) Simplifies the maintenance of the application
+   5) Makes the application easier to understand.
+
+**DISADVANTAGES**
+   1) The main disadvantage of encapsulation in is it increases the length of the code and slows shutdown execution.
+
+6)POLYMORPHISM
+
+**WHAT**
+
+   The word polymorphism means having many forms. In programming, 
+   polymorphism means same function name (but different signatures) being uses for different types.
+
+**REAL WORLD EXAMPLE**
+   The person at the same time can have different characteristics.
+   Like a man at the same time is a father,husband as well as employee at diff situation.
+
+**TYPES**
+ ##METHOD OVERLOADING(Compile time)
+   In the method overloading, methods or functions must have the same name and different signatures.(i.e..diff class name and same fun name).
+   In the method overloading, inheritance may or may not be required.
+   It is used in order to add more to the behavior of methods.
+
+ ##METHOD OVERRIDING(Run time)
+   Whereas in the method overriding, methods or functions must have the same name and same signatures.(same fun and same class)
+   Whereas in method overriding, inheritance always required.
+   Whereas it is used in order to change the behavior of exist methods.
+
+**ADVANTAGE**
+   1)It helps the programmer to reuse the codes, i.e., classes once written, tested and implemented can be reused as required. 
+   2)Saves a lot of time.
+   3)Single variable can be used to store multiple data types.
+   4)Easy to debug the codes.
+
+**DISADVANTAGES**
+  1) One of the disadvantages of polymorphism is that developers find it difficult to implement polymorphism in codes.
+  2) Run time polymorphism can lead to the performance issue as machine needs to decide which method or variable to invoke.
+  3) so it basically degrades the performances as decisions are taken at run time.
+  4) Polymorphism reduces the readability of the program. One needs to identify the runtime behavior of the program to identify actual execution time.
+
+**overloading program**
+class India():
+    def capital(self):
+        print("New Delhi is the capital of India.")
+  
+    def language(self):
+        print("Hindi is the most widely spoken language of India.")
+  
+    def type(self):
+        print("India is a developing country.")
+  
+class USA():
+    def capital(self):
+        print("Washington, D.C. is the capital of USA.")
+  
+    def language(self):
+        print("English is the primary language of USA.")
+  
+    def type(self):
+        print("USA is a developed country.")
+  
+obj_ind = India()
+obj_usa = USA()
+for country in (obj_ind, obj_usa):
+    country.capital()
+    country.language()
+    country.type()
+Output:
+New Delhi is the capital of India.
+Hindi is the most widely spoken language of India.
+India is a developing country.
+Washington, D.C. is the capital of USA.
+English is the primary language of USA.
+USA is a developed country.
+
+**Method overriding program**
+
+class Bird:
+  def intro(self):
+    print("There are many types of birds.")
+      
+  def flight(self):
+    print("Most of the birds can fly but some cannot.")
+    
+class sparrow(Bird):
+  def flight(self):
+    print("Sparrows can fly.")
+      
+class ostrich(Bird):
+  def flight(self):
+    print("Ostriches cannot fly.")
+      
+obj_bird = Bird()
+obj_spr = sparrow()
+obj_ost = ostrich()
+  
+obj_bird.intro()
+obj_bird.flight()
+  
+obj_spr.intro()
+obj_spr.flight()
+  
+obj_ost.intro()
+obj_ost.flight()
+Output:
+There are many types of birds.
+Most of the birds can fly but some cannot.
+There are many types of birds.
+Sparrows can fly.
+There are many types of birds.
+Ostriches cannot fly.
+
+7)ABSTRACTION
+
+**WHAT**
+  1) Abstraction in Python is the process of hiding the real implementation of an application 
+     from the user and emphasizing only on usage of it.
+
+**ADVANTAGES**
+  1)It reduces the complexity of viewing the things.
+  2)Avoids code duplication and increases reusability.
+  3)Helps to increase security of an application or program as only important details are provided to the user.
+
+**DISADVANTAGES**
+  There are some disadvantages to abstractions in programming though. 
+  First of all, the more abstraction layers you add, the less efficient the end program will run. 
+  This is due to the higher languages has to be interpreted and eventually compiled.
+
+
+from abc import ABC, abstractmethod   
+class Car(ABC):   
+    def mileage(self):   
+        pass  
+  
+class Tesla(Car):   
+    def mileage(self):   
+        print("The mileage is 30kmph")   
+class Suzuki(Car):   
+    def mileage(self):   
+        print("The mileage is 25kmph ")   
+class Duster(Car):   
+     def mileage(self):   
+          print("The mileage is 24kmph ")   
+  
+class Renault(Car):   
+    def mileage(self):   
+            print("The mileage is 27kmph ")   
+          
+# Driver code   
+t= Tesla ()   
+t.mileage()   
+  
+r = Renault()   
+r.mileage()   
+  
+s = Suzuki()   
+s.mileage()   
+d = Duster()   
+d.mileage()  
+
+OUTPUT:
+
+The mileage is 30kmph
+The mileage is 27kmph 
+The mileage is 25kmph 
+The mileage is 24kmph
+
+8)INHERITANCE
+
+**WHAT**
+  Inheritance is the capability of one class to derive or inherit the properties from another class.
+**TYPES**
+ ##SINGLE LEVEL
+  When a child class inherits from only one parent class, it is called single inheritance.
+ ##MULTIPLE 
+   When a child class inherits from multiple parent classes, it is called multiple inheritance. 
+ ##MULTILEVEL
+   When we have a child and grandchild relationship.
+ ##HIERARCHICAL
+    More than one derived classes are created from a single base.
+ ##HYBRID
+    This form combines more than one form of inheritance. Basically, it is a blend of more than one type of inheritance.
+
+**ADVANTAGES**
+   1)Inheritance promotes reusability. When a class inherits or derives another class, it can access all the functionality of inherited class.
+   2)Reusability enhanced reliability. The base class code will be already tested and debugged.
+   3)As the existing code is reused, it leads to less development and maintenance costs.
+   4)Inheritance makes the sub classes follow a standard interface.
+   5)Inheritance helps to reduce code redundancy and supports code extensibility.
+   6)Inheritance facilitates creation of class libraries.
+
+**DISADVANTAGES**
+  1)Inherited functions work slower than normal function as there is indirection.
+  2)Improper use of inheritance may lead to wrong solutions.
+  3)Often, data members in the base class are left unused which may lead to memory wastage.
+  4)Inheritance increases the coupling between base class and derived class. 
+    A change in base class will affect all the child classes.
+
+####PROGRAM####
+1)SINGLE
+-------------
+class Parent:
+   def func1(self):
+      print("parent is knowledgable person")
+class Child(Parent):
+   def func2(self):
+      print("child is a speaker")
+ob = Child()
+ob.func1()
+ob.func2()
+
+2)MULTIPLE
+------------
+class Parent1:
+   def func1(self):
+        print("this is function 1")
+class Parent2:
+   def func2(self):
+        print("this is function 2")
+class Child(Parent1 , Parent2):
+    def func3(self):
+        print("this is function 3")
+ 
+ob = Child()
+ob.func1()
+ob.func2()
+ob.func3()
+
+3)MULTILEVEL
+--------------
+class Parent:
+      def func1(self):
+          print("this is function 1")
+class Child(Parent):
+      def func2(self):
+          print("this is function 2")
+class Child2(Child):
+      def func3("this is function 3")
+ob = Child2()
+ob.func1()
+ob.func2()
+ob.func3()
+
+4)HIERARCHICAL
+-----------------
+class Parent:
+      def func1(self):
+          print("this is function 1")
+class Child1(Parent):
+      def func2(self):
+          print("this is function 2")
+class Child2(Parent):
+      def func3(self):
+          print("this is function 3")
+ 
+ob = Child1()
+ob1 = Child2()
+ob.func1()
+ob.func2()
+
+5)HYBRID
+-------------
+class Parent:
+     def func1(self):
+         print("this is function one")
+ 
+class Child(Parent):
+     def func2(self):
+         print("this is function 2")
+ 
+class Child1(Parent):
+     def func3(self):
+         print(" this is function 3"):
+ 
+class Child3(Parent , Child1):
+     def func4(self):
+         print(" this is function 4")
+ 
+ob = Child3()
+ob.func1()
+
+6)Python Super() Function
+-------------------------------
+Super function allows us to call a method from the parent class.
+
+class Parent:
+     def func1(self):
+         print("this is function 1")
+class Child(Parent):
+     def func2(self):
+          Super().func1()
+          print("this is function 2")
+ 
+ob = Child()
+ob.func2()
+___________________________________________________________     _________________________________________________
+__________________________________________________________________________      ___________________________________________  
+
+
+         ******DATA STRUCTURE******
+
+1) WHAT IS SORTING AND TYPE
+**WHAT**
+A sorting algorithm is just a series of orders or instructions.
+In this, an array is an input, on which the sorting algorithm performs operations to give out a sorted array.
+
+**TYPE**
+There are two different categories in sorting:
+
+Internal sorting: If the input data is such that it can be adjusted in the main memory at once.
+                  *Bubble Sort
+                  *Insertion Sort
+                  *Quick Sort
+                  *Heap Sort
+                  *Radix Sort
+                  *Selection sort
+
+External sorting: If the input data is such that it cannot be adjusted in the memory entirely at once, 
+                  it needs to be stored in a hard disk, floppy disk, or any other storage device.
+                  *quick sort
+                  *merge sort
+                  *hybrid sort
+-------------------------------------
+
+2) BUBBLE SORT
+**WHAT**
+
+Bubble sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm 
+in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. 
+This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n2) where n is the number of items.
+
+**ADVANTAGE**
+
+  1)The primary advantage of the bubble sort is that it is popular and easy to implement.
+  2)In the bubble sort, elements are swapped in place without using additional temporary storage.
+  3)The space requirement is at a minimum
+
+**DISADVANTAGES**
+
+  1)The main disadvantage of the bubble sort is the fact that it does not deal well with a list containing a huge number of items.
+  2)The bubble sort requires n-squared processing steps for every n number of elements to be sorted.
+  3)The bubble sort is mostly suitable for academic teaching but not for real-life applications.
+
+**PROGRAM**
+
+def bubble_sort(list1):  
+    # Outer loop for traverse the entire list  
+    for i in range(0,len(list1)-1):  
+        for j in range(len(list1)-1):  
+            if(list1[j]>list1[j+1]):   
+                # here we are not using temp variable  
+                list1[j],list1[j+1] = list1[j+1], list1[j]  
+    return list1  
+list1 = [5, 3, 8, 6, 7, 2]  
+print("The unsorted list is: ", list1)  
+# Calling the bubble sort function  
+print("The sorted list is: ", bubble_sort(list1))  
+-----------------------------------------------------------------------
+3) SELECTION SORT
+
+**WHAT**
+
+ 1)Selection sort is a simple sorting algorithm. This sorting algorithm is an in-place comparison-based algorithm in which the list is divided into two parts, 
+   the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
+
+ 2)The smallest element is selected from the unsorted array and swapped with the leftmost element, 
+   and that element becomes a part of the sorted array. 
+   This process continues moving unsorted array boundary by one element to the right.
+
+ 3)This algorithm is not suitable for large data sets as its average and worst case complexities are of Ο(n2), 
+   where n is the number of items.
+
+**ADVANTAGES**
+
+ 1)The main advantage of the selection sort is that it performs well on a small list.
+ 2)Because it is an in-place sorting algorithm, no additional temporary storage is required beyond what is needed to hold the original list.
+ 3)Its performance is easily influenced by the initial ordering of the items before the sorting process.
+
+**DISADVANTAGES**
+
+ 1)The primary disadvantage of the selection sort is its poor efficiency when dealing with a huge list of items.
+ 2)The selection sort requires n-squared number of steps for sorting n elements.
+ 3)Quick Sort is much more efficient than selection sort
+
+
+**PROGRAM**
+
+# Selection sort in Python
+
+
+def selectionSort(array, size):
+   
+    for step in range(size):
+        min_idx = step
+
+        for i in range(step + 1, size):
+         
+            # to sort in descending order, change > to < in this line
+            # select the minimum element in each loop
+            if array[i] < array[min_idx]:
+                min_idx = i
+         
+        # put min at the correct position
+        (array[step], array[min_idx]) = (array[min_idx], array[step])
+
+
+data = [-2, 45, 0, 11, -9]
+size = len(data)
+selectionSort(data, size)
+print('Sorted Array in Ascending Order:')
+print(data)
+-----------------------------------------------------------------------------------------------
+3) INSERTION SORT
+
+**WHAT**
+
+This is an in-place comparison-based sorting algorithm. Here, a sub-list is maintained which is always sorted. 
+For example, the lower part of an array is maintained to be sorted. An element which is to be 'insert'ed in this sorted sub-list, 
+has to find its appropriate place and then it has to be inserted there. Hence the name, insertion sort.
+
+The array is searched sequentially and unsorted items are moved and inserted into the sorted sub-list (in the same array). 
+This algorithm is not suitable for large data sets as its average and worst case complexity are of Ο(n2), where n is the number
+
+**ADVANTAGES**
+
+ 1)The main advantage of the insertion sort is its simplicity.
+ 2)It also exhibits a good performance when dealing with a small list.
+ 3)The insertion sort is an in-place sorting algorithm so the space requirement is minimal.
+
+**DISADVANTAGES**
+
+ 1)The disadvantage of the insertion sort is that it does not perform as well as other, better sorting algorithms
+ 2)With n-squared steps required for every n element to be sorted, the insertion sort does not deal well with a huge list.
+ 3)The insertion sort is particularly useful only when sorting a list of few items.
+
+**PROGRAM**
+
+def insertionSort(array):
+
+    for step in range(1, len(array)):
+        key = array[step]
+        j = step - 1
+        
+        # Compare key with each element on the left of it until an element smaller than it is found
+        # For descending order, change key<array[j] to key>array[j].        
+        while j >= 0 and key < array[j]:
+            array[j + 1] = array[j]
+            j = j - 1
+        
+        # Place key at after the element just smaller than it.
+        array[j + 1] = key
+
+
+data = [9, 5, 1, 4, 3]
+insertionSort(data)
+print('Sorted Array in Ascending Order:')
+print(data)
+
+---------------------------------------------------------------------------------------
+
+
